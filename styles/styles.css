@@ -1,0 +1,28 @@
+:root {
+  --transparent: transparent;
+  --white: #ffffff;
+  --yellow: #efd912;
+  --light-yellow: #f7ea79cc;
+  --blue: #ecf7ff;
+  --orange: #ffded4;
+  --gray: #331b3ba8;
+  --black: #331b3b;
+
+  --font-size-xxl: 60px;
+  --font-size-xl: 48px;
+  --font-size-l: 36px;
+  --font-size-m: 24px;
+  --font-size-s: 18px;
+  --font-size-xs: 16px;
+
+  --transition: 0.2s ease all;
+}
+
+body {
+  margin: 0px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--transparent);
+  font-family: 'Hind Vadodara', sans-serif;
+}
