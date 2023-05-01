@@ -1,0 +1,28 @@
+$transparent: transparent;
+$white: #ffffff;
+$yellow: #efd912;
+$light-yellow: #f7ea79cc;
+$blue: #deeffa;
+$orange: #ffded4;
+$gray: #331b3ba8;
+$dark-gray: #331b3b;
+$black: #232323;
+
+$font-size-xl: 48px;
+$font-size-l: 36px;
+$font-size-m: 24px;
+$font-size-s: 18px;
+$font-size-xs: 16px;
+$font-size-xxs: 12px;
+
+$transition: 0.2s ease all;
+$hover-opacity: 0.6;
+
+$page-padding: 15px 30px;
+
+%highlight {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: $yellow;
+}
