@@ -29,13 +29,13 @@ body {
   font-size: var(--font-size-s);
   color: var(--dark-gray);
   min-height: 100vh;
+  overflow-x: hidden;
   display: grid;
   grid-template: auto 1fr auto / 1fr minmax(300px, 1440px) 1fr;
   grid-template-areas:
     '. header .'
     '. main .'
     'footer footer footer';
-  overflow: hidden;
 }
 
 header {
@@ -220,11 +220,11 @@ main p {
 
 .intro-section__background {
   position: absolute;
-  width: 120%;
-  top: -200px;
-  z-index: -5;
+  width: 100%;
+  top: -180px;
+  z-index: -15;
 }
 
 .intro-section__wpl-intro-image {
-  width: 90%;
+  width: 80%;
 }
