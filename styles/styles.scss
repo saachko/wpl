@@ -224,7 +224,6 @@ main {
   border-radius: 0 270px 0 0;
   padding-top: 50px;
   padding-bottom: 50px;
-  z-index: -10;
 }
 
 .video-wrapper {
@@ -232,6 +231,10 @@ main {
   display: flex;
   gap: 50px;
   align-items: center;
+
+  iframe {
+    z-index: 3;
+  }
 }
 
 .video-section__text {
@@ -243,6 +246,7 @@ main {
   margin: 0;
   display: block;
   position: relative;
+  z-index: 3;
 }
 
 .video-section__text strong::before {
