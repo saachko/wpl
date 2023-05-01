@@ -225,6 +225,7 @@ main section {
 }
 .video-wrapper iframe {
   z-index: 3;
+  border: 0px;
 }
 
 .video-section__text {
