@@ -61,13 +61,21 @@ main {
 }
 
 .main__players,
-.main__wpl-event,
-.main__results {
+.main__results,
+.main__wpl-event {
   grid-template-areas: '. content .';
+  row-gap: 20px;
 
   @media (max-width: $breakpoint-m) {
     margin-top: 20px;
   }
+}
+
+.main__wpl-event {
+  grid-template-areas:
+    '. content .'
+    'video video video'
+    '. schedule-info .';
 }
 
 .nav__list,
@@ -435,12 +443,19 @@ main {
     padding: $page-padding-s;
   }
 }
+.video-section-youtube {
+  @media (max-width: $breakpoint-xl) {
+    border-radius: 0 0 0 0;
+    margin-right: 0;
+  }
+}
 
 .video-section__video {
   grid-area: video-content;
   display: flex;
   gap: 50px;
   align-items: center;
+  margin-left: 50px;
 
   iframe {
     z-index: 3;
@@ -460,6 +475,10 @@ main {
     }
   }
 
+  @media (max-width: $breakpoint-xxl) {
+    margin-left: 0;
+  }
+
   @media (max-width: $breakpoint-l) {
     flex-direction: column;
     align-items: flex-start;
@@ -468,6 +487,18 @@ main {
 
   @media (max-width: $breakpoint-s) {
     gap: 5px;
+  }
+}
+
+.video-section__video-youtube {
+  @media (max-width: $breakpoint-xl) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    iframe {
+      width: 100%;
+    }
   }
 }
 
@@ -760,13 +791,28 @@ main {
 }
 
 .players-section,
-.wpl-event-section,
-.results-section {
+.events-section,
+.results-section,
+.schedule-section {
   grid-area: content;
 
   @media (max-width: $breakpoint-m) {
     .title {
       text-align: center;
+    }
+  }
+}
+
+.schedule-section {
+  grid-area: schedule-info;
+
+  @media (max-width: $breakpoint-m) {
+    .title {
+      font-size: $font-size-m;
+    }
+
+    ul {
+      padding-left: 0;
     }
   }
 }
@@ -842,7 +888,6 @@ main {
 
 .panel {
   padding: 0 18px;
-  // display: none;
   background-color: $white;
   overflow: hidden;
   transition: max-height 1s cubic-bezier(0, 1, 0, 1);
@@ -851,5 +896,17 @@ main {
   &_active {
     transition: max-height 1s ease-in;
     max-height: 3000px;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: $yellow;
+  text-decoration-thickness: 3px;
+  color: $gray;
+  transition: $transition;
+
+  &:hover {
+    opacity: $hover-opacity;
   }
 }

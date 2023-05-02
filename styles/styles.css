@@ -57,16 +57,21 @@ main section {
 }
 
 .main__players,
-.main__wpl-event,
-.main__results {
+.main__results,
+.main__wpl-event {
   grid-template-areas: ". content .";
+  row-gap: 20px;
 }
 @media (max-width: 578px) {
   .main__players,
-  .main__wpl-event,
-  .main__results {
+  .main__results,
+  .main__wpl-event {
     margin-top: 20px;
   }
+}
+
+.main__wpl-event {
+  grid-template-areas: ". content ." "video video video" ". schedule-info .";
 }
 
 .nav__list,
@@ -438,11 +443,19 @@ main section {
   }
 }
 
+@media (max-width: 850px) {
+  .video-section-youtube {
+    border-radius: 0 0 0 0;
+    margin-right: 0;
+  }
+}
+
 .video-section__video {
   grid-area: video-content;
   display: flex;
   gap: 50px;
   align-items: center;
+  margin-left: 50px;
 }
 .video-section__video iframe {
   z-index: 3;
@@ -464,6 +477,11 @@ main section {
     width: 100%;
   }
 }
+@media (max-width: 1080px) {
+  .video-section__video {
+    margin-left: 0;
+  }
+}
 @media (max-width: 768px) {
   .video-section__video {
     flex-direction: column;
@@ -474,6 +492,17 @@ main section {
 @media (max-width: 420px) {
   .video-section__video {
     gap: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .video-section__video-youtube {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .video-section__video-youtube iframe {
+    width: 100%;
   }
 }
 
@@ -775,15 +804,29 @@ main section {
 }
 
 .players-section,
-.wpl-event-section,
-.results-section {
+.events-section,
+.results-section,
+.schedule-section {
   grid-area: content;
 }
 @media (max-width: 578px) {
   .players-section .title,
-  .wpl-event-section .title,
-  .results-section .title {
+  .events-section .title,
+  .results-section .title,
+  .schedule-section .title {
     text-align: center;
+  }
+}
+
+.schedule-section {
+  grid-area: schedule-info;
+}
+@media (max-width: 578px) {
+  .schedule-section .title {
+    font-size: 24px;
+  }
+  .schedule-section ul {
+    padding-left: 0;
   }
 }
 
@@ -863,4 +906,15 @@ main section {
 .panel_active {
   transition: max-height 1s ease-in;
   max-height: 3000px;
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: #efd912;
+  text-decoration-thickness: 3px;
+  color: rgba(51, 27, 59, 0.6588235294);
+  transition: 0.2s ease all;
+}
+.link:hover {
+  opacity: 0.6;
 }/*# sourceMappingURL=styles.css.map */
