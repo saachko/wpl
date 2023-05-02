@@ -22,3 +22,13 @@ const toggleBurgerMenu = () => {
 
 burgerMenu.addEventListener('click', toggleBurgerMenu);
 shadow.addEventListener('click', toggleBurgerMenu);
+
+const accordions = document.getElementsByClassName('accordion');
+
+for (let i = 0; i < accordions.length; i++) {
+  accordions[i].addEventListener('click', () => {
+    accordions[i].classList.toggle('active');
+    const panel = accordions[i].nextElementSibling;
+    panel.classList.toggle('panel_active');
+  });
+}

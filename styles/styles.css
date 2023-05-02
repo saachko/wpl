@@ -56,11 +56,15 @@ main section {
   padding: 15px 30px;
 }
 
-.main__players {
+.main__players,
+.main__wpl-event,
+.main__results {
   grid-template-areas: ". content .";
 }
 @media (max-width: 578px) {
-  .main__players {
+  .main__players,
+  .main__wpl-event,
+  .main__results {
     margin-top: 20px;
   }
 }
@@ -770,11 +774,15 @@ main section {
   z-index: -1;
 }
 
-.players-section {
+.players-section,
+.wpl-event-section,
+.results-section {
   grid-area: content;
 }
 @media (max-width: 578px) {
-  .players-section .title {
+  .players-section .title,
+  .wpl-event-section .title,
+  .results-section .title {
     text-align: center;
   }
 }
@@ -817,4 +825,42 @@ main section {
 }
 .player .player__photo img {
   width: 100%;
+}
+
+.accordion-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion {
+  background-color: #e8e8e8;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.2s ease all;
+  color: #331b3b;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.active,
+.accordion:hover {
+  background-color: rgba(247, 234, 121, 0.8);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+  max-height: 0px;
+}
+.panel_active {
+  transition: max-height 1s ease-in;
+  max-height: 3000px;
 }/*# sourceMappingURL=styles.css.map */

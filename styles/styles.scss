@@ -60,7 +60,9 @@ main {
   }
 }
 
-.main__players {
+.main__players,
+.main__wpl-event,
+.main__results {
   grid-template-areas: '. content .';
 
   @media (max-width: $breakpoint-m) {
@@ -757,7 +759,9 @@ main {
   }
 }
 
-.players-section {
+.players-section,
+.wpl-event-section,
+.results-section {
   grid-area: content;
 
   @media (max-width: $breakpoint-m) {
@@ -807,5 +811,45 @@ main {
     img {
       width: 100%;
     }
+  }
+}
+
+.accordion-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion {
+  background-color: $light-gray;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: $transition;
+  color: $dark-gray;
+  font-size: $font-size-s;
+  border-radius: 8px;
+}
+
+.active,
+.accordion:hover {
+  background-color: $light-yellow;
+}
+
+.panel {
+  padding: 0 18px;
+  // display: none;
+  background-color: $white;
+  overflow: hidden;
+  transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+  max-height: 0px;
+
+  &_active {
+    transition: max-height 1s ease-in;
+    max-height: 3000px;
   }
 }
