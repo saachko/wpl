@@ -19,6 +19,13 @@
 
   <body>
     <header>
+      <button type="button" class="burger-menu" onclick="">
+        <span class="burger-menu__bar"></span>
+        <span class="burger-menu__bar"></span>
+        <span class="burger-menu__bar"></span>
+      </button>
+      <div class="overlay" onclick=""></div>
+
       <nav>
         <ul class="nav__list">
           <li>
@@ -103,7 +110,7 @@
       </section>
 
       <section class="video-section">
-        <div class="video-wrapper">
+        <div class="video-section__video">
           <iframe
             src="https://player.vimeo.com/video/804104059?h=3553e144a9"
             width="640"
@@ -123,8 +130,8 @@
 
       <section class="news-section">
         <article class="news-item">
-          <div class="news-item__main-block">
-            <div class="news-item__image">
+          <div class="news-item__main-block news-item__main-block_styled">
+            <div class="news-item__image_styled">
               <img
                 class="news-item__background"
                 src="images/icons/bg-figure-2.svg"
@@ -133,6 +140,14 @@
               <img
                 class="news-item__photo"
                 src="images/content/WPL_winnercircle.webp"
+                alt="team-photo"
+              />
+            </div>
+
+            <div class="news-item__image team-image">
+              <img
+                class="news-item__photo"
+                src="images/content/WPL_winnercircle-full.webp"
                 alt="team-photo"
               />
             </div>
@@ -233,7 +248,7 @@
           <div class="news-item__main-block">
             <div class="news-item__image">
               <img
-                class="news-item__photo winner-photo"
+                class="news-item__photo"
                 src="images/content/Hester-NC.webp"
                 alt="Gary Hester"
               />

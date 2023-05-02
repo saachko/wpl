@@ -20,6 +20,13 @@ $transition: 0.2s ease all;
 $hover-opacity: 0.6;
 
 $page-padding: 15px 30px;
+$page-padding-s: 15px 5px;
+
+$breakpoint-xxl: 1080px;
+$breakpoint-xl: 850px;
+$breakpoint-l: 768px;
+$breakpoint-m: 578px;
+$breakpoint-s: 420px;
 
 %highlight {
   position: absolute;
